@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehreen Riaz - Resume</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f4f4f4;
+            color: #000;
+            line-height: 1.4;
+            padding: 20px;
+        }
+
+        .no-print-bar {
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .btn-print {
+            background-color: #0056b3;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .btn-print:hover {
+            background-color: #003d82;
+        }
+
+        .resume-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        header p {
+            font-size: 13.5px;
+            margin-bottom: 2px;
+        }
+
+        header a {
+            color: #0000ee;
+            text-decoration: underline;
+        }
+
+        .contact-links {
+            margin-top: 6px;
+            font-size: 13.5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .contact-item {
+            white-space: nowrap;
+        }
+
+        /* Section Title */
+        section {
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 1px solid #000;
+            padding-bottom: 2px;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 8px;
+            font-size: 13.5px;
+        }
+
+        table, th, td {
+            border: 1px solid #000;
+        }
+
+        th, td {
+            padding: 5px 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f8f8f8;
+            font-weight: bold;
+        }
+
+        /* Lists and Experience/Projects */
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .item-sub {
+            font-style: italic;
+            font-size: 13.5px;
+            margin-bottom: 4px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            font-size: 13.5px;
+        }
+
+        li {
+            margin-bottom: 3px;
+        }
+
+        .skills-list p {
+            font-size: 13.5px;
+            margin-bottom: 4px;
+        }
+
+        /* Print Settings for PDF */
+        @media print {
+            body {
+                background-color: #fff;
+                padding: 0;
+            }
+
+            .no-print-bar {
+                display: none;
+            }
+
+            .resume-container {
+                box-shadow: none;
+                padding: 0;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="no-print-bar">
+        <button class="btn-print" onclick="window.print()">Print / Save as PDF</button>
+    </div>
+
+    <div class="resume-container">
+        <!-- HEADER -->
+        <header>
+            <h1>Mehreen Riaz</h1>
+            <p>Bahawalpur, Punjab, Pakistan</p>
+            <p><strong>BS Information Technology Student</strong> — The Islamia University of Bahawalpur</p>
+            <div class="contact-links">
+                <span class="contact-item">Email: <a href="mailto:mehreenriaz1532@gmail.com">mehreenriaz1532@gmail.com</a></span>
+                <span>|</span>
+                <span class="contact-item">LinkedIn: <a href="https://www.linkedin.com/in/mehreen-riaz-1a6343393" target="_blank">linkedin.com/in/mehreen-riaz-1a6343393</a></span>
+                <span>|</span>
+                <span class="contact-item">GitHub: <a href="https://github.com/mehreenriaz1532-design" target="_blank">github.com/mehreenriaz1532-design</a></span>
+            </div>
+        </header>
+
+        <!-- EDUCATION -->
+        <section>
+            <div class="section-title">Education</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Degree/Certificate</th>
+                        <th>Institute / Board</th>
+                        <th>Percentage / Grade</th>
+                        <th>Year</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>BS Information Technology</td>
+                        <td>The Islamia University of Bahawalpur</td>
+                        <td>80% (100% Merit Scholarship)</td>
+                        <td>2025 – Present</td>
+                    </tr>
+                    <tr>
+                        <td>Intermediate (FSc / ICS)</td>
+                        <td>Govt. Graduate College for Women Satellite Town, Bahawalpur</td>
+                        <td>86%</td>
+                        <td>2024</td>
+                    </tr>
+                    <tr>
+                        <td>Matriculation (Science)</td>
+                        <td>Govt. Girls H/S Mohajir Colony Baghdad, Bahawalpur</td>
+                        <td>89%</td>
+                        <td>2022</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- WORK EXPERIENCE -->
+        <section>
+            <div class="section-title">Work Experience</div>
+            
+            <div style="margin-bottom: 10px;">
+                <div class="item-header">
+                    <span>Front-End Development Intern</span>
+                    <span>Sep 2026 – Present</span>
+                </div>
+                <div class="item-sub">WebEra Solutions PK (Remote)</div>
+                <ul>
+                    <li>Working on real-world front-end development projects using HTML, CSS, JavaScript, Bootstrap, and React.js.</li>
+                    <li>Collaborating on modern responsive layouts and user interface components.</li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <div class="item-header">
+                    <span>Frontend Development Intern</span>
+                    <span>Aug 2026 – Sep 2026</span>
+                </div>
+                <div class="item-sub">CodeAlpha (Remote)</div>
+                <ul>
+                    <li>Completed a hands-on learning internship focused on building interactive front-end web applications.</li>
+                    <li>Implemented responsive web designs using core web technologies (HTML5, CSS3, JavaScript).</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- LEADERSHIP & VOLUNTEER EXPERIENCE -->
+        <section>
+            <div class="section-title">Leadership & Volunteer Experience</div>
+            <div style="margin-bottom: 10px;">
+                <div class="item-header">
+                    <span>Executive Member — IT Club</span>
+                    <span>2025 – Present</span>
+                </div>
+                <div class="item-sub">Department of Information Technology, IUB</div>
+                <ul>
+                    <li>Organizing departmental tech events, seminars, and coding competitions for students.</li>
+                    <li>Assisting in managing student engagement activities and promoting technical learning programs.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- TECHNICAL PROJECTS -->
+        <section>
+            <div class="section-title">Technical Projects</div>
+
+            <div style="margin-bottom: 10px;">
+                <div class="item-header">
+                    <span>TechWire – News & Tech Media Web Portal</span>
+                    <span><a href="https://github.com/mehreenriaz1532-design/techwire-website" target="_blank">[GitHub]</a></span>
+                </div>
+                <div class="item-sub">Frontend Web Application</div>
+                <ul>
+                    <li>Developed a multi-section news web portal featuring podcast banners, media cards, and dynamic navigation links.</li>
+                    <li>Designed responsive UI layouts using modern CSS Flexbox and Grid components.</li>
+                    <li><strong>Tech Stack:</strong> HTML5, CSS3, JavaScript</li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <div class="item-header">
+                    <span>TechFlux & CoffeeShop Platforms</span>
+                    <span><a href="https://github.com/mehreenriaz1532-design/techflux" target="_blank">[GitHub]</a></span>
+                </div>
+                <div class="item-sub">Interactive Web Applications</div>
+                <ul>
+                    <li>Built web interfaces with interactive product section cards, promotional layouts, and smooth user navigation.</li>
+                    <li>Utilized Vanilla JavaScript DOM manipulation for UI responsiveness.</li>
+                    <li><strong>Tech Stack:</strong> HTML5, CSS3, JavaScript</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- HONORS & ACHIEVEMENTS -->
+        <section>
+            <div class="section-title">Honors & Achievements</div>
+            <ul>
+                <li><strong>100% Honor Merit Scholarship:</strong> Awarded full tuition fee waiver for BS IT based on outstanding academic merit.</li>
+                <li><strong>TryHackMe [HACKER Rank - Level 8]:</strong> Active cybersecurity practitioner with hands-on Web Application Pentesting experience.</li>
+                <li><strong>PKR 50,000 Academic Scholarship:</strong> Awarded cash scholarship in the <em>Groomer Battle of the Brains</em> Competition.</li>
+                <li><strong>50+ Python Problems Solved:</strong> Completed foundational logic & algorithm challenges on W3Schools.</li>
+                <li><strong>Brain War 2026:</strong> Certificate of Participation in National Level Tech Quiz organized by CodeArenas (Unstop).</li>
+                <li><strong>QuizOff 2026 (Global AI Quiz):</strong> Participated among 525,000+ global students on CampusCrew / Unstop platform.</li>
+            </ul>
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section>
+            <div class="section-title">Certifications</div>
+            <ul>
+                <li><strong>Google Cybersecurity Professional Certificate</strong> — Coursera (Covering Python, SQL, Linux, and Network Security).</li>
+                <li><strong>Google Data Analytics Professional Certificate</strong> — Coursera (Data Analysis using Spreadsheets, SQL, Tableau, and R).</li>
+                <li><strong>Google AI Essentials Specialization</strong> — Coursera (AI Workflows, Prompting Techniques, and Productivity Tools).</li>
+                <li><strong>Accelerate Your Job Search with AI</strong> — Google / Coursera Specialization.</li>
+            </ul>
+        </section>
+
+        <!-- TECHNICAL SKILLS & TOOLS -->
+        <section>
+            <div class="section-title">Technical Skills & Tools</div>
+            <div class="skills-list">
+                <p><strong>Programming Languages:</strong> C++, Python, JavaScript, SQL, HTML5</p>
+                <p><strong>Frontend Technologies:</strong> CSS3, Bootstrap, React.js (Learning), Responsive Web Design, DOM Manipulation</p>
+                <p><strong>Design & Office Tools:</strong> Canva (Graphic & UI Layout Design), MS Office (Word, Excel, PowerPoint)</p>
+                <p><strong>Cybersecurity & Dev Tools:</strong> Web Application Pentesting, Linux, Git, GitHub, VS Code</p>
+                <p><strong>Coursework Focus:</strong> Data Structures & Algorithms (DSA), Software Engineering, Cloud Basics</p>
+                <p><strong>Soft Skills:</strong> Leadership, Problem Solving, Adaptability, Teamwork, Event Management</p>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
