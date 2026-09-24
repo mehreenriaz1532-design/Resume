@@ -14,69 +14,72 @@
         body {
             font-family: 'Times New Roman', Times, serif;
             background-color: #f4f4f4;
-            color: #1a1a1a;
-            line-height: 1.25;
-            padding: 10px;
+            color: #000;
+            line-height: 1.35;
+            padding: 15px;
         }
 
+        /* Top Action / Print Bar */
         .no-print-bar {
             max-width: 800px;
-            margin: 0 auto 10px auto;
+            margin: 0 auto 15px auto;
             display: flex;
             justify-content: flex-end;
+            gap: 10px;
         }
 
         .btn-print {
-            background-color: #003366;
+            background-color: #0056b3;
             color: #fff;
             border: none;
-            padding: 6px 14px;
-            font-size: 12px;
+            padding: 10px 18px;
+            font-size: 14px;
             font-weight: bold;
             cursor: pointer;
             border-radius: 4px;
+            transition: background-color 0.2s ease;
         }
 
         .btn-print:hover {
-            background-color: #002244;
+            background-color: #003d82;
         }
 
+        /* Resume Document Container */
         .resume-container {
             max-width: 800px;
             margin: 0 auto;
             background-color: #fff;
-            padding: 20px 30px;
+            padding: 30px 40px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        /* Header */
+        /* Header Styling */
         header {
             text-align: center;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
         header h1 {
-            font-size: 22px;
+            font-size: 24px;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin-bottom: 1px;
-            color: #003366;
+            margin-bottom: 3px;
         }
 
         header p {
-            font-size: 11.5px;
-            margin-bottom: 1px;
+            font-size: 12.5px;
+            margin-bottom: 2px;
         }
 
         header a {
-            color: #003366;
+            color: #0000ee;
             text-decoration: underline;
         }
 
         .contact-links {
-            margin-top: 3px;
-            font-size: 11.5px;
+            margin-top: 4px;
+            font-size: 12px;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -87,88 +90,145 @@
             white-space: nowrap;
         }
 
-        /* Section Title */
+        /* Section Title Styling */
         section {
-            margin-bottom: 6px;
+            margin-bottom: 10px;
         }
 
         .section-title {
-            font-size: 13px;
+            font-size: 14px;
             font-weight: bold;
             text-transform: uppercase;
-            border-bottom: 1.5px solid #003366;
-            color: #003366;
+            border-bottom: 1px solid #000;
             padding-bottom: 1px;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
             letter-spacing: 0.5px;
         }
 
-        /* Tables */
+        /* Table Styling */
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 2px;
-            font-size: 11px;
+            margin-bottom: 6px;
+            font-size: 12px;
         }
 
         table, th, td {
-            border: 1px solid #003366;
+            border: 1px solid #000;
         }
 
         th, td {
-            padding: 2px 5px;
+            padding: 4px 6px;
             text-align: left;
         }
 
         th {
-            background-color: #f0f4f8;
-            color: #003366;
+            background-color: #f8f8f8;
             font-weight: bold;
         }
 
-        /* Lists and Experience/Projects */
+        /* List and Experience Items */
         .item-header {
             display: flex;
             justify-content: space-between;
             font-weight: bold;
-            font-size: 12px;
+            font-size: 13px;
         }
 
         .item-sub {
             font-style: italic;
-            font-size: 11px;
-            margin-bottom: 1px;
+            font-size: 12px;
+            margin-bottom: 3px;
         }
 
         ul {
             list-style-type: disc;
-            margin-left: 16px;
-            font-size: 11px;
+            margin-left: 18px;
+            font-size: 12px;
         }
 
         li {
-            margin-bottom: 1px;
+            margin-bottom: 2px;
         }
 
         .skills-list p {
-            font-size: 11px;
-            margin-bottom: 1px;
+            font-size: 12px;
+            margin-bottom: 3px;
         }
 
-        /* Print Settings for Single Page A4 PDF */
-        @media print {
-            @page {
-                size: A4;
-                margin: 5mm 8mm 5mm 8mm;
+        /* =================================================== */
+        /* MEDIA SCREEN QUERIES (Mobile and Tablet Responsive) */
+        /* =================================================== */
+        @media screen and (max-width: 600px) {
+            body {
+                padding: 8px;
             }
 
-            body {
-                background-color: #fff;
-                padding: 0;
+            .resume-container {
+                padding: 18px 15px;
+            }
+
+            header h1 {
+                font-size: 20px;
+            }
+
+            header p {
+                font-size: 11.5px;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                gap: 3px;
+                align-items: center;
+            }
+
+            .contact-links span.separator {
+                display: none;
+            }
+
+            .item-header {
+                flex-direction: column;
+                align-items: flex-start;
+                font-size: 12px;
+            }
+
+            table {
+                font-size: 11px;
+            }
+
+            th, td {
+                padding: 3px 4px;
             }
 
             .no-print-bar {
-                display: none;
+                justify-content: center;
+            }
+
+            .btn-print {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        /* =================================================== */
+        /* MEDIA PRINT QUERIES (PDF Save & Printable Single Page) */
+        /* =================================================== */
+        @media print {
+            @page {
+                size: A4 portrait;
+                margin: 8mm 10mm;
+            }
+
+            html, body {
+                background-color: #fff;
+                padding: 0;
+                margin: 0;
+                font-size: 11.5px;
+                line-height: 1.25;
+            }
+
+            .no-print-bar {
+                display: none !important;
             }
 
             .resume-container {
@@ -177,15 +237,42 @@
                 width: 100%;
                 max-width: 100%;
             }
+
+            header h1 {
+                font-size: 21px;
+            }
+
+            .section-title {
+                font-size: 13px;
+                margin-bottom: 4px;
+            }
+
+            section {
+                margin-bottom: 8px;
+            }
+
+            ul {
+                font-size: 11.5px;
+            }
+
+            table {
+                font-size: 11px;
+            }
+
+            th, td {
+                padding: 3px 5px;
+            }
         }
     </style>
 </head>
 <body>
 
+    <!-- Action Bar -->
     <div class="no-print-bar">
-        <button class="btn-print" onclick="window.print()">Print / Save as PDF</button>
+        <button class="btn-print" onclick="window.print()">Download PDF / Print</button>
     </div>
 
+    <!-- Resume Container -->
     <div class="resume-container">
         <!-- HEADER -->
         <header>
@@ -194,9 +281,9 @@
             <p><strong>BS Information Technology Student</strong> — The Islamia University of Bahawalpur</p>
             <div class="contact-links">
                 <span class="contact-item">Email: <a href="mailto:mehreenriaz1532@gmail.com">mehreenriaz1532@gmail.com</a></span>
-                <span>|</span>
+                <span class="separator">|</span>
                 <span class="contact-item">LinkedIn: <a href="https://www.linkedin.com/in/mehreen-riaz-1a6343393" target="_blank">linkedin.com/in/mehreen-riaz-1a6343393</a></span>
-                <span>|</span>
+                <span class="separator">|</span>
                 <span class="contact-item">GitHub: <a href="https://github.com/mehreenriaz1532-design" target="_blank">github.com/mehreenriaz1532-design</a></span>
             </div>
         </header>
@@ -240,7 +327,7 @@
         <section>
             <div class="section-title">Work Experience</div>
             
-            <div style="margin-bottom: 4px;">
+            <div style="margin-bottom: 6px;">
                 <div class="item-header">
                     <span>Front-End Development Intern</span>
                     <span>Sep 2026 – Present</span>
@@ -252,7 +339,7 @@
                 </ul>
             </div>
 
-            <div style="margin-bottom: 4px;">
+            <div style="margin-bottom: 6px;">
                 <div class="item-header">
                     <span>Frontend Development Intern</span>
                     <span>Aug 2026 – Sep 2026</span>
@@ -268,7 +355,7 @@
         <!-- LEADERSHIP & VOLUNTEER EXPERIENCE -->
         <section>
             <div class="section-title">Leadership & Volunteer Experience</div>
-            <div style="margin-bottom: 4px;">
+            <div style="margin-bottom: 6px;">
                 <div class="item-header">
                     <span>Executive Member — IT Club</span>
                     <span>2025 – Present</span>
@@ -285,7 +372,7 @@
         <section>
             <div class="section-title">Technical Projects</div>
 
-            <div style="margin-bottom: 4px;">
+            <div style="margin-bottom: 6px;">
                 <div class="item-header">
                     <span>TechWire – News & Tech Media Web Portal</span>
                     <span><a href="https://github.com/mehreenriaz1532-design/techwire-website" target="_blank">[GitHub]</a></span>
@@ -298,7 +385,7 @@
                 </ul>
             </div>
 
-            <div style="margin-bottom: 4px;">
+            <div style="margin-bottom: 6px;">
                 <div class="item-header">
                     <span>TechFlux & CoffeeShop Platforms</span>
                     <span><a href="https://github.com/mehreenriaz1532-design/techflux" target="_blank">[GitHub]</a></span>
