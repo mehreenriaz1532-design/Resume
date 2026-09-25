@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mehreen Riaz - Resume</title>
+    <!-- Mobile PDF Generation Engine -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
         * {
             box-sizing: border-box;
@@ -15,14 +17,13 @@
             font-family: 'Times New Roman', Times, serif;
             background-color: #f4f4f4;
             color: #000;
-            line-height: 1.35;
-            padding: 15px;
+            line-height: 1.25;
+            padding: 10px;
         }
 
-        /* Top Action / Print Bar */
         .no-print-bar {
             max-width: 800px;
-            margin: 0 auto 15px auto;
+            margin: 0 auto 10px auto;
             display: flex;
             justify-content: flex-end;
             gap: 10px;
@@ -32,31 +33,30 @@
             background-color: #0056b3;
             color: #fff;
             border: none;
-            padding: 10px 18px;
-            font-size: 14px;
+            padding: 8px 16px;
+            font-size: 13px;
             font-weight: bold;
             cursor: pointer;
             border-radius: 4px;
-            transition: background-color 0.2s ease;
+            transition: background 0.2s;
         }
 
         .btn-print:hover {
             background-color: #003d82;
         }
 
-        /* Resume Document Container */
         .resume-container {
             max-width: 800px;
             margin: 0 auto;
             background-color: #fff;
-            padding: 30px 40px;
+            padding: 20px 30px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        /* Header Styling */
+        /* Header */
         header {
             text-align: center;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         header h1 {
@@ -64,12 +64,12 @@
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
         }
 
         header p {
-            font-size: 12.5px;
-            margin-bottom: 2px;
+            font-size: 12px;
+            margin-bottom: 1px;
         }
 
         header a {
@@ -78,8 +78,8 @@
         }
 
         .contact-links {
-            margin-top: 4px;
-            font-size: 12px;
+            margin-top: 3px;
+            font-size: 11px;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -90,27 +90,27 @@
             white-space: nowrap;
         }
 
-        /* Section Title Styling */
+        /* Section Title */
         section {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .section-title {
-            font-size: 14px;
+            font-size: 13px;
             font-weight: bold;
             text-transform: uppercase;
             border-bottom: 1px solid #000;
             padding-bottom: 1px;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             letter-spacing: 0.5px;
         }
 
-        /* Table Styling */
+        /* Tables */
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 6px;
-            font-size: 12px;
+            margin-bottom: 4px;
+            font-size: 11px;
         }
 
         table, th, td {
@@ -118,7 +118,7 @@
         }
 
         th, td {
-            padding: 4px 6px;
+            padding: 2px 5px;
             text-align: left;
         }
 
@@ -127,104 +127,68 @@
             font-weight: bold;
         }
 
-        /* List and Experience Items */
+        /* Lists and Experience/Projects */
         .item-header {
             display: flex;
             justify-content: space-between;
             font-weight: bold;
-            font-size: 13px;
+            font-size: 11.5px;
         }
 
         .item-sub {
             font-style: italic;
-            font-size: 12px;
-            margin-bottom: 3px;
+            font-size: 11px;
+            margin-bottom: 2px;
         }
 
         ul {
             list-style-type: disc;
-            margin-left: 18px;
-            font-size: 12px;
+            margin-left: 16px;
+            font-size: 11px;
         }
 
         li {
-            margin-bottom: 2px;
+            margin-bottom: 1px;
+        }
+
+        .summary-text {
+            font-size: 11px;
+            text-align: justify;
+            margin-bottom: 4px;
         }
 
         .skills-list p {
-            font-size: 12px;
-            margin-bottom: 3px;
+            font-size: 11px;
+            margin-bottom: 2px;
         }
 
-        /* =================================================== */
-        /* MEDIA SCREEN QUERIES (Mobile and Tablet Responsive) */
-        /* =================================================== */
+        /* Mobile Screen Optimizations */
         @media screen and (max-width: 600px) {
             body {
-                padding: 8px;
+                padding: 5px;
             }
-
             .resume-container {
-                padding: 18px 15px;
+                padding: 15px 18px;
             }
-
             header h1 {
                 font-size: 20px;
             }
-
-            header p {
-                font-size: 11.5px;
-            }
-
             .contact-links {
-                flex-direction: column;
-                gap: 3px;
-                align-items: center;
-            }
-
-            .contact-links span.separator {
-                display: none;
-            }
-
-            .item-header {
-                flex-direction: column;
-                align-items: flex-start;
-                font-size: 12px;
-            }
-
-            table {
-                font-size: 11px;
-            }
-
-            th, td {
-                padding: 3px 4px;
-            }
-
-            .no-print-bar {
-                justify-content: center;
-            }
-
-            .btn-print {
-                width: 100%;
-                text-align: center;
+                font-size: 10px;
+                gap: 5px;
             }
         }
 
-        /* =================================================== */
-        /* MEDIA PRINT QUERIES (PDF Save & Printable Single Page) */
-        /* =================================================== */
+        /* Print Settings for Strict Single Page PDF */
         @media print {
             @page {
-                size: A4 portrait;
-                margin: 8mm 10mm;
+                size: A4;
+                margin: 5mm 6mm;
             }
 
-            html, body {
+            body {
                 background-color: #fff;
                 padding: 0;
-                margin: 0;
-                font-size: 11.5px;
-                line-height: 1.25;
             }
 
             .no-print-bar {
@@ -237,56 +201,37 @@
                 width: 100%;
                 max-width: 100%;
             }
-
-            header h1 {
-                font-size: 21px;
-            }
-
-            .section-title {
-                font-size: 13px;
-                margin-bottom: 4px;
-            }
-
-            section {
-                margin-bottom: 8px;
-            }
-
-            ul {
-                font-size: 11.5px;
-            }
-
-            table {
-                font-size: 11px;
-            }
-
-            th, td {
-                padding: 3px 5px;
-            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Action Bar -->
     <div class="no-print-bar">
-        <button class="btn-print" onclick="window.print()">Download PDF / Print</button>
+        <button class="btn-print" onclick="downloadPDF()">Download Single-Page PDF</button>
     </div>
 
-    <!-- Resume Container -->
-    <div class="resume-container">
+    <div class="resume-container" id="resume-content">
         <!-- HEADER -->
         <header>
             <h1>Mehreen Riaz</h1>
-            <p>Bahawalpur, Punjab, Pakistan</p>
+            <p>Bahawalpur, Punjab, Pakistan | <strong>Phone:</strong> +92 300 0000000</p>
             <p><strong>BS Information Technology Student</strong> — The Islamia University of Bahawalpur</p>
             <div class="contact-links">
                 <span class="contact-item">Email: <a href="mailto:mehreenriaz1532@gmail.com">mehreenriaz1532@gmail.com</a></span>
-                <span class="separator">|</span>
-                <span class="contact-item">LinkedIn: <a href="https://www.linkedin.com/in/mehreen-riaz-1a6343393" target="_blank">linkedin.com/in/mehreen-riaz-1a6343393</a></span>
-                <span class="separator">|</span>
-                <span class="contact-item">GitHub: <a href="https://github.com/mehreenriaz1532-design" target="_blank">github.com/mehreenriaz1532-design</a></span>
+                <span>|</span>
+                <span class="contact-item">LinkedIn: <a href="https://www.linkedin.com/in/mehreen-riaz-1a6343393" target="_blank">https://www.linkedin.com/in/mehreen-riaz-1a6343393</a></span>
+                <span>|</span>
+                <span class="contact-item">GitHub: <a href="https://github.com/mehreenriaz1532-design" target="_blank">https://github.com/mehreenriaz1532-design</a></span>
             </div>
         </header>
+
+        <!-- PROFESSIONAL SUMMARY -->
+        <section>
+            <div class="section-title">Professional Summary</div>
+            <p class="summary-text">
+                Detail-oriented Frontend Developer with hands-on experience building performant Web Applications using React.js, Next.js, TypeScript, and REST APIs. Proficient in Tailwind CSS for Responsive Web Design, Redux for State Management, and Webpack/Git workflows for streamlined production builds.
+            </p>
+        </section>
 
         <!-- EDUCATION -->
         <section>
@@ -327,27 +272,28 @@
         <section>
             <div class="section-title">Work Experience</div>
             
-            <div style="margin-bottom: 6px;">
+            <div style="margin-bottom: 5px;">
                 <div class="item-header">
                     <span>Front-End Development Intern</span>
                     <span>Sep 2026 – Present</span>
                 </div>
                 <div class="item-sub">WebEra Solutions PK (Remote)</div>
                 <ul>
-                    <li>Engineered 12+ responsive web page components and modern UI layouts using HTML5, CSS3, JavaScript, Bootstrap, and React.js.</li>
-                    <li>Optimized website cross-browser compatibility and user interface performance across 3+ client projects.</li>
+                    <li>Engineered 12+ responsive web components and dynamic user interfaces using React.js, Next.js, TypeScript, Tailwind CSS, and Bootstrap.</li>
+                    <li>Integrated REST APIs for data fetching and configured Webpack build optimizations, increasing page load speed by 20%.</li>
+                    <li>Managed Git & GitHub Version Control repositories with feature branch workflows across client projects.</li>
                 </ul>
             </div>
 
-            <div style="margin-bottom: 6px;">
+            <div style="margin-bottom: 3px;">
                 <div class="item-header">
                     <span>Frontend Development Intern</span>
                     <span>Aug 2026 – Sep 2026</span>
                 </div>
                 <div class="item-sub">CodeAlpha (Remote)</div>
                 <ul>
-                    <li>Built and deployed 5+ interactive front-end web applications during an intensive remote internship program.</li>
-                    <li>Implemented responsive web designs achieving 100% mobile-friendly score on modern browser tests.</li>
+                    <li>Built 5+ interactive web applications utilizing TypeScript, JavaScript (ES6+), and mobile-first Tailwind CSS design standards.</li>
+                    <li>Executed frontend state management and DOM manipulation for high cross-browser compatibility.</li>
                 </ul>
             </div>
         </section>
@@ -355,7 +301,7 @@
         <!-- LEADERSHIP & VOLUNTEER EXPERIENCE -->
         <section>
             <div class="section-title">Leadership & Volunteer Experience</div>
-            <div style="margin-bottom: 6px;">
+            <div style="margin-bottom: 3px;">
                 <div class="item-header">
                     <span>Executive Member — IT Club</span>
                     <span>2025 – Present</span>
@@ -363,7 +309,6 @@
                 <div class="item-sub">Department of Information Technology, IUB</div>
                 <ul>
                     <li>Organized 4+ departmental tech events, seminars, and coding competitions engaging over 250+ university students.</li>
-                    <li>Coordinated technical learning workshops and managed student engagement initiatives across the department.</li>
                 </ul>
             </div>
         </section>
@@ -372,29 +317,27 @@
         <section>
             <div class="section-title">Technical Projects</div>
 
-            <div style="margin-bottom: 6px;">
+            <div style="margin-bottom: 5px;">
                 <div class="item-header">
                     <span>TechWire – News & Tech Media Web Portal</span>
-                    <span><a href="https://github.com/mehreenriaz1532-design/techwire-website" target="_blank">[GitHub]</a></span>
+                    <span><a href="https://github.com/mehreenriaz1532-design/techwire-website" target="_blank">[GitHub Repository]</a></span>
                 </div>
                 <div class="item-sub">Frontend Web Application</div>
                 <ul>
-                    <li>Developed a multi-section news web portal featuring podcast banners, media cards, and dynamic navigation links.</li>
-                    <li>Designed responsive UI layouts using CSS Flexbox and Grid, reducing layout loading delay by 15%.</li>
-                    <li><strong>Tech Stack:</strong> HTML5, CSS3, JavaScript (DOM Manipulation)</li>
+                    <li>Developed a multi-section news web portal consuming asynchronous REST APIs for real-time article updates.</li>
+                    <li>Styled responsive UI layouts using Tailwind CSS and CSS Grid. <strong>Tech Stack:</strong> TypeScript, Next.js, REST APIs, Git</li>
                 </ul>
             </div>
 
-            <div style="margin-bottom: 6px;">
+            <div style="margin-bottom: 3px;">
                 <div class="item-header">
                     <span>TechFlux & CoffeeShop Platforms</span>
-                    <span><a href="https://github.com/mehreenriaz1532-design/techflux" target="_blank">[GitHub]</a></span>
+                    <span><a href="https://github.com/mehreenriaz1532-design/techflux" target="_blank">[GitHub Repository]</a></span>
                 </div>
                 <div class="item-sub">Interactive Web Applications</div>
                 <ul>
-                    <li>Built interactive product cards, promotional sections, and smooth multi-page navigation for web platforms.</li>
-                    <li>Utilized Vanilla JavaScript DOM manipulation to deliver dynamic user interaction components.</li>
-                    <li><strong>Tech Stack:</strong> HTML5, CSS3, JavaScript</li>
+                    <li>Built interactive product interfaces and dynamic cart components with centralized Redux State Management.</li>
+                    <li><strong>Tech Stack:</strong> React.js, TypeScript, Tailwind CSS, Webpack</li>
                 </ul>
             </div>
         </section>
@@ -403,12 +346,10 @@
         <section>
             <div class="section-title">Honors & Achievements</div>
             <ul>
-                <li><strong>100% Honor Merit Scholarship:</strong> Awarded full tuition fee waiver for BS IT degree program based on top academic merit.</li>
-                <li><strong>QuizOff 2026 (Global AI Quiz):</strong> Represented Pakistan and competed among <strong>525,000+ global participants</strong> in an international technology contest hosted on Unstop.</li>
-                <li><strong>TryHackMe [HACKER Rank - Level 8]:</strong> Active cybersecurity practitioner with hands-on Web Application Pentesting experience.</li>
-                <li><strong>PKR 50,000 Academic Scholarship:</strong> Secured cash prize scholarship in the national-level <em>Groomer Battle of the Brains</em> Competition.</li>
-                <li><strong>50+ Algorithmic Problems Solved:</strong> Solved 50+ foundational logic and algorithmic coding challenges in C++ & Python.</li>
-                <li><strong>Brain War 2026:</strong> Earned Certificate of Participation in International Tech Quiz organized by CodeArenas on Unstop platform.</li>
+                <li><strong>100% Honor Merit Scholarship:</strong> Awarded full tuition fee waiver for BS IT degree program based on academic merit.</li>
+                <li><strong>QuizOff 2026 (Global AI Quiz):</strong> Represented Pakistan among <strong>525,000+ global participants</strong> on Unstop.</li>
+                <li><strong>TryHackMe [HACKER Rank - Level 8]:</strong> Active cybersecurity practitioner with hands-on Web Pentesting experience.</li>
+                <li><strong>PKR 50,000 Academic Scholarship:</strong> Secured cash prize scholarship in the national-level <em>Groomer Battle of the Brains</em>.</li>
             </ul>
         </section>
 
@@ -416,10 +357,9 @@
         <section>
             <div class="section-title">Certifications</div>
             <ul>
-                <li><strong>Google Cybersecurity Professional Certificate</strong> — Coursera (Covering Python, SQL, Linux, and Network Security).</li>
-                <li><strong>Google Data Analytics Professional Certificate</strong> — Coursera (Data Analysis using Spreadsheets, SQL, Tableau, and R).</li>
-                <li><strong>Google AI Essentials Specialization</strong> — Coursera (AI Workflows, Prompting Techniques, and Productivity Tools).</li>
-                <li><strong>Accelerate Your Job Search with AI</strong> — Google / Coursera Specialization.</li>
+                <li><strong>Google Cybersecurity Professional Certificate</strong> — Coursera (Python, SQL, Linux, Network Security)</li>
+                <li><strong>Google Data Analytics Professional Certificate</strong> — Coursera (Spreadsheets, SQL, Tableau, R)</li>
+                <li><strong>Google AI Essentials Specialization</strong> — Coursera (AI Workflows, Prompting Techniques)</li>
             </ul>
         </section>
 
@@ -427,15 +367,32 @@
         <section>
             <div class="section-title">Technical Skills & Tools</div>
             <div class="skills-list">
-                <p><strong>Core Focus & Algorithms:</strong> Data Structures & Algorithms (DSA in C++), Time & Space Complexity, Problem Solving</p>
-                <p><strong>Programming Languages:</strong> C++, Python, JavaScript (ES6+), SQL, HTML5</p>
-                <p><strong>Frontend Technologies:</strong> CSS3, Bootstrap, React.js (Learning), Responsive Web Design, DOM Manipulation</p>
-                <p><strong>Design & Office Tools:</strong> Canva (Graphic & UI Layout Design), MS Office (Word, Excel, PowerPoint)</p>
-                <p><strong>Cybersecurity & Dev Tools:</strong> Web Application Pentesting, Linux, Git, GitHub, VS Code</p>
-                <p><strong>Soft Skills:</strong> Leadership, Problem Solving, Adaptability, Teamwork, Event Management</p>
+                <p><strong>Core Focus & Frameworks:</strong> React.js, Next.js, TypeScript, State Management (Redux/Context API), REST APIs, Data Structures & Algorithms</p>
+                <p><strong>Frontend & Styling:</strong> Tailwind CSS, Bootstrap, HTML5, CSS3, JavaScript (ES6+), Responsive Web Design, Webpack</p>
+                <p><strong>Programming & Version Control:</strong> C++, Python, JavaScript, TypeScript, SQL | Git, GitHub, VS Code, Linux, NPM</p>
             </div>
         </section>
     </div>
 
+    <!-- Script for Direct Mobile/Desktop PDF Download -->
+    <script>
+        function downloadPDF() {
+            const element = document.getElementById('resume-content');
+            const opt = {
+                margin:       [5, 5, 5, 5],
+                filename:     'Mehreen_Riaz_Resume.pdf',
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 2, useCORS: true },
+                jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+
+            // Direct Download Execution
+            if (typeof html2pdf !== 'undefined') {
+                html2pdf().set(opt).from(element).save();
+            } else {
+                window.print();
+            }
+        }
+    </script>
 </body>
 </html>
