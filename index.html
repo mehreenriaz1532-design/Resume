@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mehreen Riaz - Resume</title>
-    <!-- Mobile PDF Generation Engine -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
         * {
@@ -49,7 +48,7 @@
             max-width: 820px;
             margin: 0 auto;
             background-color: #fff;
-            padding: 22px 30px;
+            padding: 20px 28px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
@@ -60,7 +59,7 @@
         }
 
         header h1 {
-            font-size: 25px;
+            font-size: 24px;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -68,18 +67,18 @@
         }
 
         header p {
-            font-size: 12.5px;
+            font-size: 12px;
             margin-bottom: 2px;
         }
 
         header a {
-            color: #0000ee;
+            color: #000;
             text-decoration: underline;
         }
 
         .contact-links {
             margin-top: 3px;
-            font-size: 11.5px;
+            font-size: 11px;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -96,7 +95,7 @@
         }
 
         .section-title {
-            font-size: 13.5px;
+            font-size: 12.5px;
             font-weight: bold;
             text-transform: uppercase;
             border-bottom: 1.5px solid #000;
@@ -105,46 +104,26 @@
             letter-spacing: 0.5px;
         }
 
-        /* Tables */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 3px;
-            font-size: 11.5px;
-        }
-
-        table, th, td {
-            border: 1px solid #000;
-        }
-
-        th, td {
-            padding: 3px 6px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f8f8f8;
-            font-weight: bold;
-        }
-
-        /* Lists and Experience/Projects */
+        /* Content Structure */
         .item-header {
             display: flex;
             justify-content: space-between;
             font-weight: bold;
-            font-size: 12px;
+            font-size: 11.5px;
         }
 
         .item-sub {
+            display: flex;
+            justify-content: space-between;
             font-style: italic;
-            font-size: 11.5px;
+            font-size: 11px;
             margin-bottom: 2px;
         }
 
         ul {
             list-style-type: disc;
-            margin-left: 18px;
-            font-size: 11.5px;
+            margin-left: 16px;
+            font-size: 11px;
         }
 
         li {
@@ -152,34 +131,17 @@
         }
 
         .summary-text {
-            font-size: 11.5px;
+            font-size: 11.2px;
             text-align: justify;
             margin-bottom: 2px;
         }
 
         .skills-list p {
-            font-size: 11.5px;
+            font-size: 11.2px;
             margin-bottom: 2px;
         }
 
-        /* Mobile Screen Optimizations */
-        @media screen and (max-width: 600px) {
-            body {
-                padding: 5px;
-            }
-            .resume-container {
-                padding: 15px 18px;
-            }
-            header h1 {
-                font-size: 21px;
-            }
-            .contact-links {
-                font-size: 10.5px;
-                gap: 5px;
-            }
-        }
-
-        /* Print Settings for Strict Single Page PDF */
+        /* Print Settings for Single Page PDF */
         @media print {
             @page {
                 size: A4;
@@ -214,197 +176,16 @@
         <!-- HEADER -->
         <header>
             <h1>Mehreen Riaz</h1>
-            <p>Bahawalpur, Punjab, Pakistan | <strong>Phone:</strong> +92 3240173940</p>
-            <p><strong>BS Information Technology Student</strong> — The Islamia University of Bahawalpur</p>
+            <p>Bahawalpur, Pakistan | +92-XXXXXXXXXXX</p>
             <div class="contact-links">
-                <span class="contact-item">Email: <a href="mailto:mehreenriaz1532@gmail.com">mehreenriaz1532@gmail.com</a></span>
-                <span>|</span>
-                <span class="contact-item">LinkedIn: <a href="https://www.linkedin.com/in/mehreen-riaz-1a6343393" target="_blank">https://www.linkedin.com/in/mehreen-riaz-1a6343393</a></span>
-                <span>|</span>
-                <span class="contact-item">GitHub: <a href="https://github.com/mehreenriaz1532-design" target="_blank">https://github.com/mehreenriaz1532-design</a></span>
+                <span class="contact-item">Email: <a href="mailto:mehreenriaz.dev@gmail.com">mehreenriaz.dev@gmail.com</a></span> | 
+                <span class="contact-item">LinkedIn: <a href="#">linkedin.com/in/mehreen-riaz</a></span> | 
+                <span class="contact-item">GitHub: <a href="https://github.com/mehreenriaz1532-design">github.com/mehreenriaz</a></span>
             </div>
         </header>
 
-        <!-- PROFESSIONAL SUMMARY -->
+        <!-- SUMMARY -->
         <section>
             <div class="section-title">Professional Summary</div>
             <p class="summary-text">
-                Detail-oriented Frontend Developer with hands-on experience building performant Web Applications using React.js, Next.js, TypeScript, JavaScript (ES6+), HTML5, CSS3, and REST APIs. Proficient in Tailwind CSS & Responsive Web Design, Redux State Management, and Git/GitHub version control workflows.
-            </p>
-        </section>
-
-        <!-- EDUCATION -->
-        <section>
-            <div class="section-title">Education</div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Degree/Certificate</th>
-                        <th>Institute / Board</th>
-                        <th>Percentage / Grade</th>
-                        <th>Year</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>BS Information Technology</td>
-                        <td>The Islamia University of Bahawalpur</td>
-                        <td>3.23 (100% Merit Scholarship)</td>
-                        <td>2025 – Present</td>
-                    </tr>
-                    <tr>
-                        <td>Intermediate (FSc pre-medical)</td>
-                        <td>Govt. Graduate College for Women Satellite Town, Bahawalpur</td>
-                        <td>86%</td>
-                        <td>2025</td>
-                    </tr>
-                    <tr>
-                        <td>Matriculation (Science)</td>
-                        <td>Govt. Girls H/S Mohajir Colony Baghdad, Bahawalpur</td>
-                        <td>89%</td>
-                        <td>2023</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!-- WORK EXPERIENCE -->
-        <section>
-            <div class="section-title">Work Experience</div>
-            
-            <div style="margin-bottom: 4px;">
-                <div class="item-header">
-                    <span>Front-End Development Intern</span>
-                    <span>Sep 2026 – Present</span>
-                </div>
-                <div class="item-sub">WebEra Solutions PK (Remote)</div>
-                <ul>
-                    <li>Engineered 12+ responsive web components and dynamic user interfaces using React.js, Next.js, TypeScript, Tailwind CSS, and Bootstrap.</li>
-                    <li>Integrated REST APIs for data fetching and configured Webpack build optimizations, increasing page load speed by 20%.</li>
-                    <li>Managed Git & GitHub Version Control repositories with feature branch workflows across client projects.</li>
-                </ul>
-            </div>
-
-            <div style="margin-bottom: 2px;">
-                <div class="item-header">
-                    <span>Frontend Development Intern</span>
-                    <span>Aug 2026 – Sep 2026</span>
-                </div>
-                <div class="item-sub">CodeAlpha (Remote)</div>
-                <ul>
-                    <li>Built 5+ interactive web applications utilizing TypeScript, JavaScript (ES6+), and mobile-first Tailwind CSS design standards.</li>
-                    <li>Executed frontend state management and DOM manipulation for high cross-browser compatibility.</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- LEADERSHIP EXPERIENCE -->
-        <section>
-            <div class="section-title">Leadership Experience</div>
-            <div style="margin-bottom: 2px;">
-                <div class="item-header">
-                    <span>Joint Secretary — IT Club</span>
-                    <span>2025 – Present</span>
-                </div>
-                <div class="item-sub">Department of Information Technology, The Islamia University of Bahawalpur</div>
-                <ul>
-                    <li>Leading student tech initiatives, organizing 4+ departmental seminars, coding competitions, and workshops for 250+ participants.</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- TECHNICAL PROJECTS -->
-        <section>
-            <div class="section-title">Technical Projects</div>
-
-            <div style="margin-bottom: 4px;">
-                <div class="item-header">
-                    <span>Jewelix – E-Commerce Store Platform</span>
-                    <span><a href="https://jewelix-drab.vercel.app/" target="_blank">[Live Demo]</a></span>
-                </div>
-                <div class="item-sub">Full-Featured E-Commerce Application</div>
-                <ul>
-                    <li>Engineered a responsive storefront with dynamic product view, interactive cart flow, and fluid UI animations.</li>
-                    <li><strong>Tech Stack:</strong> React.js, JavaScript (ES6+), Tailwind CSS, HTML5, Vercel Deployment</li>
-                </ul>
-            </div>
-
-            <div style="margin-bottom: 4px;">
-                <div class="item-header">
-                    <span>TechWire – News & Tech Media Web Portal</span>
-                    <span><a href="https://mehreenriaz1532-design.github.io/techwire-website/" target="_blank">[Live Demo]</a></span>
-                </div>
-                <div class="item-sub">Frontend Media & Content Application</div>
-                <ul>
-                    <li>Developed a tech media platform consuming asynchronous REST APIs for real-time article updates and category filtering.</li>
-                    <li><strong>Tech Stack:</strong> TypeScript, Next.js, Fetch API / REST APIs, Tailwind CSS, GitHub Pages</li>
-                </ul>
-            </div>
-
-            <div style="margin-bottom: 2px;">
-                <div class="item-header">
-                    <span>TechFlux & CoffeeShop Platforms</span>
-                    <span><a href="https://techflux-five.vercel.app/" target="_blank">[TechFlux Demo]</a> | <a href="https://coffee-shop-mehreen3.vercel.app/" target="_blank">[CoffeeShop Demo]</a></span>
-                </div>
-                <div class="item-sub">Interactive Web Applications</div>
-                <ul>
-                    <li>Built interactive product interfaces and dynamic cart components with Redux State Management and LocalStorage persistence.</li>
-                    <li><strong>Tech Stack:</strong> React.js, TypeScript, Tailwind CSS, Redux, Vercel Deployment</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- HONORS & ACHIEVEMENTS -->
-        <section>
-            <div class="section-title">Honors & Achievements</div>
-            <ul>
-                <li><strong>100% Honor Merit Scholarship:</strong> Awarded full tuition fee waiver for BS IT degree program based on academic merit.</li>
-                <li><strong>QuizOff 2026 (Global AI Quiz):</strong> Represented Pakistan among <strong>525,000+ global participants</strong> on Unstop.</li>
-                <li><strong>TryHackMe [HACKER Rank - Level 8]:</strong> Active cybersecurity practitioner with hands-on Web Pentesting experience.</li>
-                <li><strong>PKR 50,000 Academic Scholarship:</strong> Secured cash prize scholarship in the national-level <em>Groomer Battle of the Brains</em>.</li>
-            </ul>
-        </section>
-
-        <!-- CERTIFICATIONS -->
-        <section>
-            <div class="section-title">Certifications</div>
-            <ul>
-                <li><strong>Google Cybersecurity Professional Certificate</strong> — Coursera (Python, SQL, Linux, Network Security)</li>
-                <li><strong>Google Data Analytics Professional Certificate</strong> — Coursera (Spreadsheets, SQL, Tableau, R)</li>
-                <li><strong>Google AI Essentials Specialization</strong> — Coursera (AI Workflows, Prompting Techniques)</li>
-            </ul>
-        </section>
-
-        <!-- TECHNICAL SKILLS & TOOLS -->
-        <section>
-            <div class="section-title">Technical Skills & Tools</div>
-            <div class="skills-list">
-                <p><strong>Programming Languages:</strong> HTML5, CSS3, JavaScript (ES6+), TypeScript, C++, Python, SQL</p>
-                <p><strong>Frontend & Frameworks:</strong> React.js, Next.js, Tailwind CSS, Bootstrap, Redux / Context API, REST APIs, Asynchronous JS / Fetch API, Webpack</p>
-                <p><strong>Developer Tools & Concepts:</strong> Git, GitHub, VS Code, Linux, NPM, Vercel, DOM Manipulation, LocalStorage, Responsive Web Design</p>
-            </div>
-        </section>
-    </div>
-
-    <!-- Script for Direct Mobile/Desktop PDF Download -->
-    <script>
-        function downloadPDF() {
-            const element = document.getElementById('resume-content');
-            const opt = {
-                margin:       [3, 3, 3, 3],
-                filename:     'Mehreen_Riaz_Resume.pdf',
-                image:        { type: 'jpeg', quality: 0.98 },
-                html2canvas:  { scale: 2, useCORS: true },
-                jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
-            };
-
-            // Direct Download Execution
-            if (typeof html2pdf !== 'undefined') {
-                html2pdf().set(opt).from(element).save();
-            } else {
-                window.print();
-            }
-        }
-    </script>
-</body>  
-</html>
+                Information Technology undergraduate and Frontend Web Developer intern at Webera Solution with a strong portfolio of responsive, high-pe
